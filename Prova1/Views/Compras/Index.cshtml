@@ -1,0 +1,35 @@
+﻿@model Prova1.Models.CompraAcao2
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Compra</h2>
+
+<p>
+    <a asp-action="Create"><button class="btn btn-info">Nova Compra</button></a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Valor</th>
+            <th>Quantidade</th>
+            <th>Broker</th>
+            <th>Data</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(int i =0; i < Model.compra.Count(); i++)
+        {
+        <tr>
+            <th>@Html.DisplayFor(modelItem => Model.compra[i].Valor)</th>
+            <th>@Html.DisplayFor(modelItem => Model.compra[i].Quantidade)</th>
+            <th>@Html.DisplayFor(modelItem => Model.compra[i].Broker)</th>
+            <th>@Html.DisplayFor(modelItem => Model.compra[i].Data)</th>
+            <th>@Html.DisplayFor(modelItem => Model.acao[i].Codigo)</th>
+        </tr>
+        }
+    </tbody>
+</table>

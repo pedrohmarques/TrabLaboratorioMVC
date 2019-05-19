@@ -1,0 +1,47 @@
+﻿@model Prova1.Models.Venda
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <a asp-action="Index"><button class="btn btn-info"><i class="glyphicon glyphicon-chevron-left"></i></button></a>
+    <h2>Detalhes da Venda</h2>
+</div>
+<hr />
+<div>
+    <h4>Venda</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Broker)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Broker)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Acao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Acao)
+        </dd>
+    </dl>
+</div>
